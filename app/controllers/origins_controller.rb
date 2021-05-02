@@ -1,5 +1,5 @@
 class OriginsController < ApplicationController
   def index
-    origins = 
+    origins = Origin.all
   end
 end

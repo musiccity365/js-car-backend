@@ -5,4 +5,18 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Car.destroy_all
+Origin.destroy_all
 
+domestic = Origin.create(name: 'Domestic')
+import = Origin.create(name: 'Import')
+
+Car.create([
+  {make: 'Honda', model: 'CR-V', year: '2014', origin: import},
+  {make: 'Honda', model: 'Civic', year: '2003', origin: import},
+  {make: 'Chevy', model: 'Suburban', year: '2007', origin: domestic},
+  {make: 'Ford', model: 'Mustang', year: '1986', origin: domestic},
+  {make: 'Audi', model: 'TT', year: '2000', origin: import},
+  {make: 'VW', model: 'Passat', year: '2000', origin: import},
+  {make: 'Jeep', model: 'Laredo', year: '2005', origin: domestic}
+])
