@@ -8,7 +8,7 @@
 # This file ensures that all of our requests are coming from permitted origins. It also specifies which urls have permission to send a request to our API.
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
-    origins '*' # the site (URL) that we are hosting from goes here, but for the purposes of this project, a simple '*' will be sufficient. 
+    origins '*' # the site (URL) that we are hosting from goes here, but for the purposes of this project, a simple '*' will be sufficient.
 
     resource '*',
       headers: :any,

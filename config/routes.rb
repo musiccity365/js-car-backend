@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  # may need to refactor these at some point.
   resources :cars
   resources :origins
   get '/test', to: 'application#test'
