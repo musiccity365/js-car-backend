@@ -2,7 +2,7 @@ class CarsController < ApplicationController
 
   def index
     cars = Car.all
-    render json: cars.to_json(except: [:created_at, :updated_at], include: {origin: [:name]})
+    render json: CarSerializer.new(cars)
   end
 
   def show
@@ -20,14 +20,14 @@ class CarsController < ApplicationController
     end
   end
 
-  def destroy
-    car = Car.find(params[:id])
-    if car.update(car_params)
+  # def destroy
+  #   car = Car.find(params[:id])
+  #   if car.update(car_params)
 
-    else
+  #   else
 
-    end
-  end
+  #   end
+  # end
 
   private
 
