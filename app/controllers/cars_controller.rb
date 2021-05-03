@@ -2,7 +2,7 @@ class CarsController < ApplicationController
 
   def index
     cars = Car.all
-    render json: CarSerializer.new(cars, include: [:origin])
+    render json: CarSerializer.new(cars, {include: [:origin]})
   end
 
   def show
