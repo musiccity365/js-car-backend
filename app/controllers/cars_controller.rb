@@ -4,7 +4,7 @@ class CarsController < ApplicationController
     cars = Car.all
     render json: CarSerializer.new(cars, {include: [:origin]})
   end
-
+  
   def show
     car = Car.find(params[:id])
     render json: CarSerializer.new(car)
