@@ -9,7 +9,7 @@ class CarsController < ApplicationController
     car = Car.find(params[:id])
     render json: CarSerializer.new(car)
   end
-  
+
   def create
     car = Car.new(car_params)
     if car.save
